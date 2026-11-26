@@ -118,18 +118,8 @@ graphs, summary_table.cpp parses it automatically to give a clean overview:
 7. KEY FINDINGS: SPARSE VS. DENSE NETWORKS
 ------------------------------------------
 Running the solver across all 120 benchmark instances (OS1 = sparsest, OS6 = densest)
-reveals a clear trade-off in how Garey's (1973) rules behave on general DAGs:
+reveals a clear trade-off in how Garey's (1973) rules behave on general DAGs (see garey_summary table.csv)
 
-  Group     Avg Nodes (Old -> New)   Node Red (%)   Avg Arcs (Old -> New)   Arc Red (%)
-  -------------------------------------------------------------------------------------
-  OS1       35.00 -> 32.40              7.43%       55.40  ->  23.45          57.67%
-  OS2       35.00 -> 34.15              2.43%       92.50  ->  51.35          44.49%
-  OS3       35.00 -> 34.40              1.71%       111.55 ->  75.50          32.32%
-  OS4       35.00 -> 34.60              1.14%       116.40 ->  99.45          14.56%
-  OS5       35.00 -> 34.95              0.14%       111.45 -> 113.90          -2.20%
-  OS6       35.00 -> 35.00              0.00%       108.50 -> 124.40         -14.65%
-  -------------------------------------------------------------------------------------
-  OVERALL   35.00 -> 34.25              2.14%       99.30  ->  81.34          18.08%
 
 Takeaways:
 - Strong preprocessing on sparse graphs (OS1 - OS3): Garey's rules eliminate 
